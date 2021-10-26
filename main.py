@@ -14,11 +14,12 @@ for p in range(1, 3):
     post_link.extend(temp_link)
 
 print(post_link)
+print(len(post_link))
 
 # run function to get drive shared link from post links
 for d in post_link:
     shared_link.append(get_drive_link(d))
-    time.sleep(3)
+    time.sleep(2)
 
 print(shared_link)
-print(shared_link.len())
+print(len(shared_link))
