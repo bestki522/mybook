@@ -1,5 +1,3 @@
-from bs4 import BeautifulSoup
-import requests
 from get_post_link import get_post_link
 
 # initial result in list object
