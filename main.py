@@ -30,3 +30,4 @@ for l in shared_link:
     download_link.append(get_direct_url(l))
 
 print(download_link)
+print('\n'.join(str(x) for x in download_link))
