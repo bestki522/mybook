@@ -1,5 +1,6 @@
 from get_post_link import get_post_link
 from get_drive_link import get_drive_link
+from converter import get_direct_url
 from requests import get
 import time
 
@@ -8,6 +9,7 @@ URL = "https://chiasemoi.com/tai-sach/sach-nuoi-day-con/page/{}/"
 # initial result in list object
 post_link = []
 shared_link = []
+download_link = []
 # run function with 1st, 2nd page
 for p in range(1, 3):
     temp_link = get_post_link(URL.format(p))
@@ -23,3 +25,8 @@ for d in post_link:
 
 print(shared_link)
 print(len(shared_link))
+
+for l in shared_link:
+    download_link.append(get_direct_url(l))
+
+print(download_link)
